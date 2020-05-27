@@ -7,3 +7,17 @@ body {
     text-align: center;
     margin: 300px auto;
 }
+
+h1 {
+    font-size: 12rem;
+    font-family: neue-haas-grotesk-display, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: -7px;
+    margin: 0;
+}
+
+p {
+    font-family: neue-haas-grotesk-text, sans-serif;
+    font-size: 1rem;
+}
