@@ -25,7 +25,7 @@ p {
 
 @media screen and (max-width: 768px) {
     body {
-        margin: 250px 20px;
+        margin: 200px 20px;
     }
     h1 {
         font-size: 7rem;
