@@ -1,0 +1,9 @@
+body {
+    background-color: black;
+}
+
+.main {
+    color: white;
+    text-align: center;
+    margin: 300px auto;
+}
