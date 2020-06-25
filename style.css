@@ -6,6 +6,15 @@ body {
     background-color: black;
 }
 
+nav {
+    z-index: 10;
+    mix-blend-mode: difference;
+}
+
+img {
+    width: 100%;
+}
+
 .main {
     color: white;
     text-align: center;
@@ -43,7 +52,19 @@ h2 {
     font-family: neue-haas-grotesk-display, sans-serif;
     font-weight: 600;
     font-style: normal;
-    line-height: 0.9;  
+    line-height: 0.9;
+    margin-bottom: 1.2rem;  
+}
+
+h4 {
+    color: rgb(230, 230, 230);
+    font-size: 0.8rem;
+    line-height: 1.1;
+    font-family: calling-code;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 16px;
+    letter-spacing: 2px;
 }
 
 h6 {
@@ -66,6 +87,14 @@ p {
     margin-bottom: 1.4em;
 }
 
+a {
+    color: white;
+}
+
+a:hover {
+    color: #e93757;
+}
+
 
 nav { 
     position: fixed;
@@ -85,7 +114,6 @@ hr {
 }
 
 .full-width {
-    padding: 1rem;
     flex: 1 1 800;
     width: 100vw;
 }
@@ -93,7 +121,13 @@ hr {
 .half-width {
     padding: 1rem;
     flex: 1 1 400px;
-    min-width: 300px;
+    min-width: 50%;
+}
+
+.third-width {
+    padding: 1rem;
+    flex: 1 1 266px;
+    min-width: 33%;
 }
 
 .quart-width {
@@ -103,11 +137,16 @@ hr {
 }
 
 .gallery {
-    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.img-link {
+    cursor: pointer;
 }
 
 .links {
     display: flex;
+    margin-top: 18px;
 }
 
 .logo {
@@ -119,6 +158,7 @@ hr {
     font-weight: 600;
     justify-content: left;
     width: 50%;
+    z-index: 10;
 }
 
 .logo a {
@@ -155,8 +195,25 @@ hr {
     text-decoration: none;
 }
 
+.burger {
+    display: none;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 6px;
+    transition: all 0.3s ease;
+}
+
 #hr-nav {
     background-color: white;
+    position: absolute;
+    top: 10;
+    left: 2rem;
+    right: 2rem;
+    transform: translateY(-55px);
     margin-top: 10px;
     margin-bottom: 6px;
     height: 2px;
@@ -171,17 +228,120 @@ hr {
     justify-content: space-around;
 }
 
+
 @media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
     .main {
         margin: 50% 20px;
+    }
+    nav {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    section {
+        margin-top: 120px;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
     }
     h6 {
         font-size: 7rem;
         line-height: 6.4rem;
         letter-spacing: -3px;
     }
+    p {
+        font-size: 1.1rem;
+    }
+    hr {
+        margin-bottom: 5px;
+    }
+    .half-width {
+        padding: 1rem 0;
+    }
+    .logo {
+        font-size: 2rem;
+        z-index: 10;
+    }
 
     .nav-links {
-        display: none;
+        font-size: 2.4rem;
+        position: absolute;
+        top: 0;
+        height: 100vh;
+        background-color: black;
+        left: 0;
+        display: block;
+        padding-top: 80px;
+        width: 100%;
+        margin: 0 1.5rem;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
     }
+    .nav-links li {
+        margin: 1.5rem 0;
+        opacity: 0;
+    }
+    .burger {
+        margin-top: 2px;
+        position: absolute;
+        display: block;
+        right: calc(1.5rem - 5px);
+        cursor: pointer;
+
+    }
+    #indented {
+        padding-left: 0;
+    }
+    #hr-nav {
+        right: 1.5rem;
+        left: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .third-width {
+        padding: 1rem 0;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes blendModeFade {
+    from {
+        mix-blend-mode: difference;
+    }
+    to {
+        mix-blend-mode: normal;
+    }
+}
+
+.toggle .line1 {
+    transform: translateY(9px) rotate(45deg);
+}
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: translateY(-9px) rotate(-45deg);
 }
