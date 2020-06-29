@@ -43,7 +43,7 @@ p a {
 hr {
     width: 90%;
     background-color: #0d2a4b;
-    height: 3px;
+    height: 5px;
     margin: 13px auto;
     text-align: center;
 }
@@ -73,13 +73,13 @@ hr {
     position: absolute;
     margin: auto;
     left: 0;
-    top: 30vh;
+    top: 34vh;
     right: 0;
     opacity: 0; 
 }
 
 .letters-1 {
-    color: #48D993;
+    color: #0095db;
     width: 65vw;
 }
 
