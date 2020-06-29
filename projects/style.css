@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 5.9rem;
+    font-family: neue-haas-grotesk-display, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 0.9;
+    margin-bottom: 1.4rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 3rem;
+    font-family: neue-haas-grotesk-display, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 0.9;
+    margin: 1.4rem auto;
+    margin-bottom: 0;
+    text-align: center;
+    color: #0d2a4b;
+}
+
+p {
+    font-family: neue-haas-grotesk-text, sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.4;
+    color: #0d2a4b;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+p a {
+    color: #0095db;
+    text-decoration: underline;
+}
+
+hr {
+    width: 90%;
+    background-color: #0d2a4b;
+    height: 3px;
+    margin: 13px auto;
+    text-align: center;
+}
+
+.bg {
+    top: 60px;
+    position: fixed;
+    min-width: 100vw;
+    height: 100vh;
+    opacity: 30%;
+    z-index: -1;
+}
+
+.body {
+    margin-top: 100vh;
+    opacity: 100%;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 10;
+}
+
+.t .letters {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: 30vh;
+    right: 0;
+    opacity: 0; 
+}
+
+.letters-1 {
+    color: #48D993;
+    width: 65vw;
+}
+
+.letters-2 {
+    color: #0095db;
+    width: 79vw;
+}
+
+.learn {
+    color: #0d2a4b;
+    position: absolute;
+    left: 0;
+    bottom: 3rem;
+    right: 0;
+    opacity: 0;
+    margin: auto;
+}
+
+@media screen and (max-width: 1200px) {
+    h1 {
+        font-size: 4.6rem;
+    }
+}
+
+@keyframes firstSlide{
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(80vw);
+    }
+}
