@@ -43,7 +43,7 @@ section {
 }
 
 .header {
-    display: flex;
+    transform: translate(-1rem, -1rem);
 }
 
 h1 {
@@ -279,6 +279,9 @@ hr {
     }
     .half-width {
         padding: 1rem 0;
+    }
+    .header {
+        transform: translate(0, -1rem);
     }
     .logo {
         font-size: 2rem;
