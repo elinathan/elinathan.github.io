@@ -62,8 +62,12 @@ h2 {
     font-family: neue-haas-grotesk-text, sans-serif;
     font-weight: 600;
     font-style: normal;
-    line-height: 0.9;
+    line-height: 1.5;
     margin-bottom: 1.2rem;  
+}
+
+h2.subheading {
+    margin-bottom: 0.5rem;
 }
 
 h4 {
@@ -265,6 +269,9 @@ hr {
 
     h2 {
         font-size: 1.1rem;
+    }
+    h2.subheading {
+        margin-bottom: 0.5rem;
     }
     h6 {
         font-size: 7rem;
