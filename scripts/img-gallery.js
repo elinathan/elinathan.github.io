@@ -8,10 +8,11 @@
 // add class to img to signal that it should be wrapped
 if ($(".gallery").has("img").length > 0) {
     $('.gallery').children().addClass('gal-img');
-
     // wrap img tags in tag to make adding images ot gallery easier
-    if ($(".gallery").has("#noClick").length > 0) {
-        $(".gal-img").wrap("<div></div>");
+    if (document.querySelector('.gallery').getAttribute('id')) {
+        if (document.querySelector('.gallery').getAttribute('id').includes('no-click')) {
+            $(".gal-img").wrap("<div></div>");
+        }
     } else {
         $(".gal-img").wrap("<a class=\"img-link\"></a>");
         // add href to link so SwipeBox can work
@@ -92,6 +93,7 @@ const getInfo = (gallerySelector) => {
 }
 
 var initPhotoSwipeFromDOM = function (gallerySelector) {
+
     // parse slide data (url, title, size ...) from DOM elements 
     // (children of gallerySelector)
     var parseThumbnailElements = function (gallery) {
