@@ -246,6 +246,10 @@ hr {
     justify-content: space-around;
 }
 
+#text-block {
+    margin-top: 0;
+}
+
 
 @media screen and (max-width: 768px) {
     body {
